@@ -16,3 +16,26 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.mainText {
+    padding: 75px 20px;
+}
+
+.mainImage {
+    width: 700px;
+    height: 280px;
+}
+
+.smallText {
+    text-align: right;
+    color: grey;
+}
+
+.makeYourOwnDiv {
+    background: grey;
+    margin: 0;
+}
+
+.makeYourOwnText {
+    margin: 100px 0 20px 0;
+    color: white;
