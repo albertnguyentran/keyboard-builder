@@ -14,9 +14,11 @@
     <Folder Include="wwwroot\images\" />
     <Folder Include="Pages\Forms\" />
     <Folder Include="Pages\Checkout\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Pages\Forms\" />
     <None Remove="Pages\Checkout\" />
+    <None Remove="Models\" />
   </ItemGroup>
 </Project>
