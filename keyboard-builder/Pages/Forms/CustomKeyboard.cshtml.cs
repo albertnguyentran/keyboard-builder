@@ -12,8 +12,20 @@ namespace keyboard_builder.Pages.Forms
     {
         [BindProperty]
         public KeyboardsModel Keyboard { get; set; }
+        public float KeyboardPrice { get; set; }
+
         public void OnGet()
         {
+        }
+
+        public IActionResult OnPost()
+        {
+            KeyboardPrice = Keyboard.BasePrice;
+
+            if (Keyboard.Switches) KeyboardPrice += 5;
+            if (Keyboard.Keycaps) KeyboardPrice += 2;
+
+            return RedirectToPage("/Checkout/Checkout", new { Keyboard.KeyboardName, KeyboardPrice});
         }
     }
 }
