@@ -27,6 +27,19 @@
                     </div>
                 </div>
             </div>
+            @foreach (var keyboard in Model.fakeKeyboardDb)
+                    {
+                        var imagePath = "~/images/keyboards/" + (keyboard.ImageTitle + ".jpeg");
+
+                <div class="col-4 mb-5">
+
+                    <img src="@imagePath" class="w-100" asp-append-version="true" />
+                    <a class="btn btn-primary mt-1" asp-area="" asp-page="Checkout/Checkout" asp-route-ImageTitle="@keyboard.ImageTitle"
+                       asp-route-KeyboardPrice="@keyboard.FinalPrice">Get this keyboard</a>
+                    <br />
+                </div>
+            }
+
         </div>
     </div>
 
