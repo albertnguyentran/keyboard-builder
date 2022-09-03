@@ -1,6 +1,15 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using keyboard_builder.Data;
+using Microsoft.EntityFrameworkCore
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContent<ApplicationDbContent>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

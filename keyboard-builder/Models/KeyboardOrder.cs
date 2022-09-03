@@ -6,6 +6,11 @@ namespace keyboard_builder.Models
         public int Id { get; set; }
         public string KeyboardName { get; set; }
         public float BasePrice { get; set; } = 200;
+
+        public KeyboardOrder()
+        {
+
+        }
     }
 }
 

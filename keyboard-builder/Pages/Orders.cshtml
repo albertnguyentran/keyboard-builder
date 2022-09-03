@@ -1,0 +1,28 @@
+﻿@page
+@model keyboard_builder.Pages.OrdersModel
+@{
+}
+
+
+<div>
+    <h1> Orders </h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Keyboard Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var order in Model.KeyboardOrders)
+            {
+                <tr>
+                    <th>@order.Id</th>
+                    <th>@order.KeyboardName</th>
+                    <th>@order.BasePrice</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
